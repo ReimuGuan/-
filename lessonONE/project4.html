@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>用循环将3个div变成红色</title>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            background-color:black;
+            float:left;
+            margin-right:10px;
+        }
+        #container{
+            width:700px;
+            height:500px;
+            margin:0 auto;
+        }
+        #button{
+            width:240px;
+            height:30px;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var box=document.getElementsByClassName("box");
+            var press=document.getElementById("press");
+            press.onclick=function(){
+                for (var i =0 ;i<box.length; i++)
+                {
+                    box[i].style.backgroundColor="red";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="button">
+            <input type="button" id="press" value="用循环将3个div变成红色"/>
+        </div>
+        <div id="display">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+
+</body>
+</html>

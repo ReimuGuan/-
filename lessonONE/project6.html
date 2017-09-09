@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #container{
+            width:150px;
+            height:30px;
+            margin:0 auto;
+            font-size:16px;
+        }
+        #notice{
+            width:150px;
+            height:40px;
+            font-size:16px;
+            margin:0 auto;
+            display:none;
+            color:red;
+            border:1px solid greenyellow;
+            background-color: orange;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var container=document.getElementById("container");
+            var notice = document.getElementById("notice");
+            container.addEventListener("mouseenter",function(){
+                notice.style.display="block"
+            });
+            container.addEventListener("mouseleave",function(){
+                notice.style.display="none"
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <input type="checkbox"/>两周内免登录
+    </div>
+    <div id="notice">
+        请勿在公共电脑上勾选此项
+    </div>
+</body>
+</html>

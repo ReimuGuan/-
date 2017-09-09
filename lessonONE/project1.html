@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>控制DIV属性</title>
+    <style>
+        #box{
+            background-color: #000;
+            width:100px;
+            height:100px;
+            margin:0 auto;
+        }
+        #table{
+            margin:0 auto;
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var width=document.getElementById("width");
+            var height=document.getElementById("height");
+            var color = document.getElementById("color");
+            var hide = document.getElementById("hide");
+            var reset = document.getElementById("reset");
+            var box= document.getElementById("box");
+            width.onclick=function(){
+                box.style.width=200+"px";
+            };
+            height.onclick=function(){
+                box.style.height=200+"px";
+            };
+            color.onclick=function(){
+                box.style.backgroundColor="red";
+            };
+            hide.onclick=function(){
+                box.style.display="none"
+            };
+            reset.onclick=function(){
+                box.style.display="block";
+                box.style.width=100+"px";
+                box.style.height=100+"px";
+                box.style.backgroundColor="#000";
+            }
+        }
+    </script>
+</head>
+<body>
+    <table id="table">
+        <tr>
+            <td><input type="button" value="变宽" id="width"/></td>
+            <td><input type="button" value="变高" id="height"/></td>
+            <td><input type="button" value="变色" id="color"/></td>
+            <td><input type="button" value="隐藏" id="hide"/></td>
+            <td><input type="button" value="重置" id="reset"/></td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <div id="box"></div>
+            </td>
+        </tr>
+    </table>
+
+
+</body>
+</html>

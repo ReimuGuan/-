@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>函数接受参数并弹出</title>
+    <style>
+        #container{
+            margin:0 auto;
+            width:300px;
+            height:300px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var city=document.getElementById("city");
+            var town=document.getElementById("town");
+            var dropout=document.getElementById("dropout");
+            dropout.onclick=function(){
+                alert(city.value);
+                alert(town.value);
+            }
+        }
+
+    </script>
+</head>
+<body>
+<div id="container">
+    <div>
+        <input type="text" value="北京市" id="city"/>
+        <input type="text" value="朝阳区" id="town"/>
+    </div>
+    <div style="width:300px;height:100px;margin-left:60px;">
+        <input type="button" value="弹出" id="dropout"/>
+    </div>
+</div>
+</body>
+</html>
